@@ -51,7 +51,10 @@
  * A convenience wrapper for [[UIApplication sharedApplication] registerForRemoteNotificationTypes:types];
  * deprecated in iOS7
  */
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated-declarations"
 - (void)registerForRemoteNotificationTypes:(UIRemoteNotificationType)types;
+#pragma clang diagnostic pop
 
 /**
  * Preferred method for registering for notifications. Backwards compatible with iOS7
